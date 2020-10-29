@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Example for Bootstrap</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .cart-price {
+            font-weight: bold;
+        }
+
+        footer ul {
+            list-style-type: none;
+        }
+
+        footer ul li {
+            /* float: left; */
+            display: inline-block;
+            text-align: center;
+        }
+
+        .xyz { 
+            background-size: auto; 
+            text-align: center; 
+            padding-top: 100px; 
+        } 
+        .btn-circle.btn-sm { 
+            width: 30px; 
+            height: 30px; 
+            padding: 6px 0px; 
+            border-radius: 15px; 
+            font-size: 8px; 
+            text-align: center; 
+        } 
+        .btn-circle.btn-md { 
+            width: 50px; 
+            height: 50px; 
+            padding: 7px 10px; 
+            border-radius: 25px; 
+            font-size: 10px; 
+            text-align: center; 
+        } 
+        .btn-circle.btn-xl { 
+            width: 70px; 
+            height: 70px; 
+            padding: 10px 16px; 
+            border-radius: 35px; 
+            font-size: 12px; 
+            text-align: center; 
+        } 
+
+
+    </style>
+    
+</head>
+<body>
+    <header class="text-center my-5">
+        <a class="brand" href="#">
+            <img src="logo.svg" alt="Logo" style="width:120px;">
+        </a>
+        <h1 class="">My Company Name</h1>
+        <p>My Company Slogan goes here</p>
+        <br>
+        <br>
+    </header>
+    <hr>
+
+    <main class="container my-5">
+
+        <h2>Billing Address</h2><br>
+        <div class="row">
+            <div class="col-sm-8">
+                <form action="">
+                    <div class="row">
+                        <div class="form-group col">
+                            <label  for="firstName">First Name</label>
+                            <input class="form-control" type="text" id="firstName">
+                        </div>
+                        <div class="form-group col">
+                            <label for="lastName">Last Name</label>
+                            <input class="form-control" type="text" id="lastName">
+                        </div>
+                    </div>
+
+                   
+                    <label for="usr">Username</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">@</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Username" id="usr" name="username">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email (Optional)</label>
+                        <input class="form-control" type="email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address 2 (Optional)</label>
+                        <input class="form-control" type="text" id="address">
+                    </div>
+                    <div class="form-group">
+                        <label for="address2">Address</label>
+                        <input class="form-control" type="text" id="address2">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="country">Country</label>
+                            <input  class="form-control" type="text" id="country">
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <label for="state">State</label>
+                            <input class="form-control"  type="text" id="state">
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="zip">Zip</label>
+                            <input  class="form-control" type="text" id="zip">
+                        </div>
+                    </div>
+                    
+        
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col-sm-8 px-5 my-0">
+                            <p>Shipping address is the same as my billing address
+                            Save this information for next time</p>
+                        </div>
+                    </div>
+                    <hr class="hr mt-0">
+        
+                    <h2>Payment</h2>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio" checked>Credit Card</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">Debit Card</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio" >Paypal</label>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <label for="cardname">Name on card</label>
+                            <input  class="form-control" type="text" id="cardname">
+                        </div>
+
+                        <div class="col">
+                            <label for="creditCardNumber">Credit Card Number</label>
+                            <input  class="form-control" type="text" id="creditCardNumber">
+                        </div>
+                    </div>
+                    <sub class="mt-0">Full name as displayed on card</sub>
+        
+        
+                    <div class="form-group mt-3">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="expiration">Expiration</label>
+                                <input  class="form-control" type="date" id="expiration">
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label for="ccv">CCV</label>
+                                <input  class="form-control" type="text" id="ccv">
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary w-100">Check out</button>
+                    </div>
+                </form>
+            </div>
+    
+            <aside class="col-sm-4">
+                <div class="d-flex justify-content-between align-content-center ">
+                        <h2>Your cart</h2>
+                        <button type="button" class="btn btn-light btn-circle btn-md" style="font-size: larger;">3</button>
+                </div>
+                <div class="card no-gutters">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item ">
+                                <div class="d-flex justify-content-between align-content-center">
+                                    <div class="">
+                                        <h4 class="card-title">Product Name2</h4>
+                                        <p class="card-text">Brief Description</p>
+                                    </div>
+                                    <p class="cart-price">$12</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item ">
+                                <div class="d-flex justify-content-between">
+                                    <div class="">
+                                        <h4 class="card-title">Product Good</h4>
+                                        <p class="card-text">Brief Description</p>
+                                    </div>
+                                    <p class="cart-price">$12</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item ">
+                                <div class="d-flex justify-content-between ">
+                                    <div class="">
+                                        <h4 class="card-title">Product 2</h4>
+                                        <p class="card-text">Brief Description</p>
+                                    </div>
+                                    <p class="cart-price">$12</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item ">
+                                <div class="d-flex justify-content-between text-success">
+                                    <div class="">
+                                        <h4 class="card-title">Promo code</h4>
+                                        <p class="card-text">EXAMPLECode</p>
+                                    </div>
+                                    <p class="cart-price">-$5</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item ">
+                                <div class="d-flex justify-content-between">
+                                    <div class="">
+                                        <h4 class="card-title">Total</h4>
+                                        <p class="card-text">Brief Description</p>
+                                    </div>
+                                    <p class="cart-price">$12</p>
+                                </div>
+                            </li>
+                        </ul>
+                </div>
+                <div class="card mt-3">
+                    <div class="card m-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Promo Code">
+                            <div class="input-group-prepend">
+                                <button class="btn " type="button">Redeem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        
+        
+
+        
+    </main>
+
+    <footer class="text-center p-0 ">
+        <hr class="mb-5">
+        <div >
+            made with ❤️ By Sartaj Ahmad
+        </div>
+
+        <ul>
+            <li>
+                <a href="">Privacy&nbsp;&nbsp;</a>
+            </li>
+            <li>
+                <a href="">Terms&nbsp;&nbsp;</a>
+            </li>
+            <li>
+                <a href="">Support</a>
+            </li>
+        </ul>
+
+        <p class="text-center">© 2020-2021</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+</body>
+</html>
